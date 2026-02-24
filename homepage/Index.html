@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Web Developer & UI Designer Portfolio">
+    <meta name="theme-color" content="#140d0b">
+    <title>Portfolio - Web Developer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">MyProfile</div>
+        <ul class="nav-menu">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li class="theme-switcher">
+                <select id="theme-select">
+                    <option value="minimal">Minimal</option>
+                    <option value="light">Light</option>
+                    <option value="dark">Dark</option>
+                </select>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="home">
+        <div class="container">
+            <div class="home-content">
+                <img src="image.jpg" alt="Profile Picture" class="profile-pic" loading="lazy">
+                <h1>Hi, I'm <span class="name">Justinclive C. Sumile</span></h1>
+                <p class="title">Frontend Developer | UI Designer</p>
+                <p class="description">
+                    I build responsive, user-friendly websites using modern web technologies. Passionate about clean UI and smooth user experience.
+                </p>
+                <a href="#contact" class="btn">Contact Me</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>I'm a web developer passionate about creating beautiful and functional websites. I enjoy building responsive designs and learning new technologies.</p>
+                    <p>In my free time, I practice coding, explore new frameworks, and work on personal projects to improve my skills.</p>
+                </div>
+                <div class="about-stats">
+                    <div class="stat">
+                        <h3>3+</h3>
+                        <p>Years Experience</p>
+                    </div>
+                    <div class="stat">
+                        <h3>15+</h3>
+                        <p>Projects Done</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title">My Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <h3>HTML</h3>
+                    <p>Building website structure</p>
+                </div>
+                <div class="skill-card">
+                    <h3>CSS</h3>
+                    <p>Styling and design</p>
+                </div>
+                <div class="skill-card">
+                    <h3>JavaScript</h3>
+                    <p>Making sites interactive</p>
+                </div>
+                <div class="skill-card">
+                    <h3>React</h3>
+                    <p>Learning modern frameworks</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">My Projects</h2>
+            <div class="projects-grid">
+                <a href="projects/js-practice/index.html" class="project-card">
+                    <h3>Java Practice</h3>
+                    <p>Interactive Java Script exercises and challenges</p>
+                    <span class="project-btn">View Project →</span>
+                </a>
+                <a href="projects/semantic-resume/MyHTML.html" class="project-card">
+                    <h3>Semantic Resume</h3>
+                    <p>Learn semantic HTML markup and best practices</p>
+                    <span class="project-btn">View Project →</span>
+                </a>
+                <a href="projects/classic-resume/MyResume.html" class="project-card">
+                    <h3>Classic Resume</h3>
+                    <p>Classic web design and layout projects</p>
+                    <span class="project-btn">View Project →</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-links">
+                <a href="https://www.linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer" class="contact-card">
+                    <h3>LinkedIn</h3>
+                    <p>Your Profile</p>
+                </a>
+                <a href="https://github.com/yourprofile" target="_blank" rel="noopener noreferrer" class="contact-card">
+                    <h3>GitHub</h3>
+                    <p>Your GitHub</p>
+                </a>
+                <a href="tel:+1234567890" class="contact-card">
+                    <h3>Phone</h3>
+                    <p>0</p>
+                </a>
+                <a href="mailto:your@email.com" class="contact-card">
+                    <h3>Email</h3>
+                    <p>justinsumile40@gmail.com</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 My Profile. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
