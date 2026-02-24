@@ -1,0 +1,279 @@
+/* Theme: Minimal (default) */
+:root {
+    --bg-primary:    #55423d;
+    --bg-secondary:  #140d0b;
+    --text-primary:  #fff3ec;
+    --text-secondary: #271c19;
+    --accent:        #e0742c;
+    --accent-light:  #ffc0ad;
+    --card-bg:       #6b504a;
+    --button-bg:     #ffc0ad;
+    --button-hover:  #a18d56;
+    --border:        #3a2520;
+    --input-bg:      #7a5e57;
+    --glow:          rgba(224, 116, 44, 0.3);
+}
+
+/* Theme: Light */
+body.light-theme {
+    --bg-primary:    #f5f0eb;
+    --bg-secondary:  #ffffff;
+    --text-primary:  #2a1a10;
+    --text-secondary: #4a2e1a;
+    --accent:        #e0742c;
+    --accent-light:  #ff9968;
+    --card-bg:       #ffffff;
+    --button-bg:     #e0742c;
+    --button-hover:  #c45a1a;
+    --border:        #d4b8a8;
+    --input-bg:      #fff3ec;
+    --glow:          rgba(224, 116, 44, 0.2);
+}
+
+/* Theme: Dark */
+body.dark-theme {
+    --bg-primary:    #0d0906;
+    --bg-secondary:  #1a100a;
+    --text-primary:  #e8d5c4;
+    --text-secondary: #c4a48a;
+    --accent:        #ff9968;
+    --accent-light:  #ffb399;
+    --card-bg:       #1f1209;
+    --button-bg:     #c45a1a;
+    --button-hover:  #a04010;
+    --border:        #3a2010;
+    --input-bg:      #150c05;
+    --glow:          rgba(255, 153, 104, 0.25);
+}
+
+/* Base */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Palatino Linotype', Palatino, Georgia, serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 24px 16px 40px;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Top bar: home button left, theme switcher right */
+.top-bar {
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 28px;
+}
+
+.home-btn {
+    padding: 8px 16px;
+    background: var(--button-bg);
+    color: var(--text-secondary);
+    text-decoration: none;
+    border-radius: 6px;
+    border: 2px solid var(--border);
+    font-weight: 700;
+    font-size: 0.88rem;
+    transition: background 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+
+.home-btn:hover {
+    background: var(--button-hover);
+    color: var(--text-primary);
+    transform: translateY(-2px);
+}
+
+.theme-switcher select {
+    padding: 8px 12px;
+    background: var(--card-bg);
+    color: var(--text-primary);
+    border: 2px solid var(--border);
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.88rem;
+    transition: border-color 0.3s ease;
+}
+
+.theme-switcher select:hover { border-color: var(--accent); }
+
+/* Card container */
+.container {
+    background: var(--card-bg);
+    border: 2px solid var(--border);
+    border-radius: 14px;
+    padding: 44px 36px;
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    box-shadow: 0 10px 36px rgba(0, 0, 0, 0.28);
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.container h1 {
+    font-size: 1.75rem;
+    color: var(--accent);
+    letter-spacing: 0.5px;
+    text-align: center;
+}
+
+/* Button row (Say Hello + Sharingan side by side) */
+.btn-row {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Input + Show button on same row */
+.input-row {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+/* Buttons */
+button {
+    padding: 10px 22px;
+    border-radius: 7px;
+    border: 2px solid var(--border);
+    font-size: 0.92rem;
+    font-family: inherit;
+    cursor: pointer;
+    background: var(--button-bg);
+    color: var(--text-secondary);
+    font-weight: 700;
+    transition: transform 0.15s ease, background 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+button:hover {
+    background: var(--button-hover);
+    color: var(--text-primary);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 18px var(--glow);
+}
+
+/* Input */
+input[type="text"] {
+    padding: 10px 14px;
+    border-radius: 7px;
+    font-size: 0.92rem;
+    font-family: inherit;
+    width: 220px;
+    background: var(--input-bg);
+    color: var(--text-primary);
+    border: 2px solid var(--border);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="text"]:focus {
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px var(--glow);
+}
+
+input[type="text"]::placeholder {
+    color: var(--text-primary);
+    opacity: 0.38;
+}
+
+/* Output text */
+#output {
+    min-height: 1.5em;
+    font-weight: bold;
+    font-size: 1rem;
+    color: var(--accent);
+    text-align: center;
+    transition: color 0.3s ease;
+}
+
+/* Hover text */
+#hoverText {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    padding: 10px 18px;
+    border-radius: 7px;
+    cursor: default;
+    transition: color 0.3s ease, background 0.3s ease, transform 0.2s ease, text-shadow 0.3s ease;
+}
+
+#hoverText.hovered {
+    color: var(--accent);
+    background: var(--glow);
+    transform: scale(1.08);
+    text-shadow: 0 0 10px var(--glow);
+}
+
+/* Sharingan / eye section */
+.eye-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    animation: eyeReveal 0.7s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.sharingan-image {
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid var(--accent);
+    animation: eyeGlow 2s ease-in-out infinite alternate;
+}
+
+.eye-label {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: var(--accent);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    animation: eyePulse 2s ease-in-out infinite;
+}
+
+/* Animations */
+@keyframes eyeReveal {
+    from {
+        opacity: 0;
+        transform: scale(0.3) rotate(-12deg);
+        filter: blur(6px);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1) rotate(0deg);
+        filter: blur(0);
+    }
+}
+
+@keyframes eyeGlow {
+    from { filter: drop-shadow(0 0 8px var(--glow)); }
+    to   { filter: drop-shadow(0 0 22px var(--accent)); }
+}
+
+@keyframes eyePulse {
+    0%, 100% { opacity: 1; }
+    50%       { opacity: 0.55; }
+}
+
+/* Responsive */
+@media (max-width: 520px) {
+    .container   { padding: 30px 20px; }
+    .container h1 { font-size: 1.4rem; }
+    .top-bar     { max-width: 100%; }
+    input[type="text"] { width: 100%; max-width: 240px; }
+}

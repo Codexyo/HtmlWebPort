@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Practice – JCS Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="top-bar">
+        <a href="../../index.html" class="home-btn">← Home</a>
+        <div class="theme-switcher">
+            <select id="theme-select">
+                <option value="minimal">Minimal</option>
+                <option value="light">Light</option>
+                <option value="dark">Dark</option>
+            </select>
+        </div>
+    </header>
+
+    <main class="container">
+        <h1>JavaScript Practice</h1>
+
+        <div class="btn-row">
+            <button onclick="sayHello()">Say Hello</button>
+            <button onclick="showSharingan()">Sharingan</button>
+        </div>
+
+        <div class="input-row">
+            <input type="text" id="userInput" placeholder="Type something...">
+            <button onclick="showInput()">Show</button>
+        </div>
+
+        <p id="output" aria-live="polite"></p>
+        <p id="hoverText">Hover over me!</p>
+
+        <div id="eyeContainer" class="eye-container" style="display:none;">
+            <img src="sharringgan.png" alt="Sharingan Eye" class="sharingan-image">
+            <p class="eye-label">Rinnegan</p>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

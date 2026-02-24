@@ -1,0 +1,194 @@
+/* Theme: Minimal (default) */
+body.minimal {
+    --bg-primary:     #55423d;
+    --text-primary:   #fff3ec;
+    --text-secondary: #271c19;
+    --accent:         #e0742c;
+    --accent-light:   #ffc0ad;
+    --card-bg:        #fff3ec;
+    --button-bg:      #ffc0ad;
+    --button-hover:   #a18d56;
+    --border:         #140d0b;
+}
+
+/* Theme: Light */
+body.light {
+    --bg-primary:     #f2ede8;
+    --text-primary:   #1a1a1a;
+    --text-secondary: #333333;
+    --accent:         #e0742c;
+    --accent-light:   #ff9968;
+    --card-bg:        #ffffff;
+    --button-bg:      #e0742c;
+    --button-hover:   #c45a1a;
+    --border:         #ddd;
+}
+
+/* Theme: Dark */
+body.dark {
+    --bg-primary:     #0f0f0f;
+    --text-primary:   #e0e0e0;
+    --text-secondary: #b0b0b0;
+    --accent:         #ff9968;
+    --accent-light:   #ffb399;
+    --card-bg:        #2a2a2a;
+    --button-bg:      #ff9968;
+    --button-hover:   #e0742c;
+    --border:         #444;
+}
+
+/* Base */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+    font-family: 'Palatino Linotype', Palatino, Georgia, serif;
+    background-color: var(--bg-primary);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 24px 16px 48px;
+    transition: background-color 0.3s ease;
+}
+
+/* Top bar */
+.top-bar {
+    width: 100%;
+    max-width: 940px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.home-btn {
+    padding: 8px 16px;
+    background: var(--button-bg);
+    color: var(--text-secondary);
+    text-decoration: none;
+    border-radius: 5px;
+    border: 2px solid var(--border);
+    font-weight: 700;
+    font-size: 0.88rem;
+    transition: background 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+
+.home-btn:hover {
+    background: var(--button-hover);
+    color: var(--text-primary);
+    transform: translateY(-2px);
+}
+
+.theme-switcher select {
+    padding: 8px 12px;
+    background: var(--card-bg);
+    color: var(--text-secondary);
+    border: 2px solid var(--border);
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.88rem;
+    transition: border-color 0.3s ease;
+}
+
+.theme-switcher select:hover { border-color: var(--accent); }
+
+/* Resume card */
+.resume-frame {
+    width: 100%;
+    max-width: 900px;
+    background: var(--card-bg);
+    color: var(--text-secondary);
+    padding: 40px 48px;
+    border-radius: 4px;
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.14);
+    transition: background-color 0.3s ease;
+}
+
+/* Resume header */
+.resume-header {
+    border-bottom: 2px solid var(--accent);
+    padding-bottom: 16px;
+    margin-bottom: 28px;
+}
+
+.resume-header h1 {
+    font-size: 1.9rem;
+    color: var(--text-secondary);
+    margin-bottom: 6px;
+}
+
+address {
+    font-style: normal;
+    font-size: 0.92rem;
+    color: var(--text-secondary);
+    opacity: 0.85;
+}
+
+address a {
+    color: var(--accent);
+    text-decoration: none;
+}
+
+address a:hover { text-decoration: underline; }
+
+/* Sections */
+section {
+    margin-bottom: 26px;
+}
+
+h2 {
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 5px;
+    margin-bottom: 14px;
+    letter-spacing: 0.3px;
+}
+
+article { margin-bottom: 16px; }
+
+h3 {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    margin-bottom: 3px;
+}
+
+.date-range {
+    font-size: 0.85rem;
+    color: var(--accent);
+    margin-bottom: 5px;
+}
+
+p {
+    font-size: 0.92rem;
+    color: var(--text-secondary);
+    line-height: 1.65;
+    opacity: 0.88;
+}
+
+ul {
+    padding-left: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 28px;
+}
+
+li {
+    font-size: 0.92rem;
+    color: var(--text-secondary);
+    opacity: 0.9;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .resume-frame { padding: 28px 24px; }
+    .resume-header h1 { font-size: 1.55rem; }
+}
+
+@media (max-width: 480px) {
+    .resume-frame { padding: 22px 16px; }
+    .top-bar { max-width: 100%; }
+    .resume-header h1 { font-size: 1.3rem; }
+    h2 { font-size: 1.05rem; }
+    ul { flex-direction: column; gap: 4px; }
+}
