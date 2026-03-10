@@ -72,11 +72,13 @@ body {
     display: block;
 }
 
-.skill-card:hover i,
-.project-card:hover i,
-.contact-card:hover i{
-    transform: scale(1.2);
-    transition: 0.3s;
+.skill-card i,
+.project-card i,
+.contact-card i{
+    font-size: 48px;
+    color: var(--accent);
+    margin-bottom: 10px;
+    display: block;
 }
 
 /* simple fade‑up animation used across sections */

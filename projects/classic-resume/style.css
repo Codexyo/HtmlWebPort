@@ -50,12 +50,13 @@ body {
     line-height: 1.7;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
+
 h1 i{
     color:#ff6a3d;
-    font-size:35px;
+    font-size:40px;
+    color: var(--accent);
     margin-right:10px;
 }
-
 
 /* animation helper */
 @keyframes fadeInUp {
