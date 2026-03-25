@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Practice – JCS Portfolio</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="js-practice-style.css">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    
+    <header>
+        <nav class="navbar" role="navigation" aria-label="Main site navigation">
+            <div class="logo">Codexyo</div>
+            <ul class="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li class="theme-switcher">
+                    <select id="theme-select">
+                        <option value="minimal">Minimal</option>
+                        <option value="light">Light</option>
+                        <option value="dark">Dark</option>
+                    </select>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+  
+          <div class="back-home">
+            <a href="../../index.html">← Back to Home</a>
+        </div>
+
+  
+    <main class="container fade-up">
+        <h1><i class="fa-brands fa-js"></i> JavaScript Practice</h1>
+        <hr class="card-divider">
+        <button onclick="sayHello()">Say Hello</button>
+
+        <div class="input-row">
+            <input type="text" id="userInput" placeholder="Type something...">
+            <button onclick="showInput()">Show</button>
+        </div>
+
+        <p id="output" aria-live="polite"></p>
+        <p id="hoverText">Hover over me!</p>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
